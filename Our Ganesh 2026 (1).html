@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#ea580c">
+<meta name="description" content="Our Ganesh Puja 2026 - Celebration, Contributions, Darshan & Photo Gallery.">
+<title>Our Ganesh 2026 | ଆମ ଗଣେଶ ପୂଜା</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #ea580c;
+  --primary-dark: #9a3412;
+  --primary-light: #ffedd5;
+  --gold: #f59e0b;
+  --gold-dark: #b45309;
+  --gold-light: #fef3c7;
+  --bg-creme: #fffbf5;
+  --card-bg: #ffffff;
+  --text-main: #291809;
+  --text-muted: #786255;
+  --green: #16a34a;
+  --border: #fed7aa;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --shadow-sm: 0 4px 15px rgba(154, 52, 18, 0.06);
+  --shadow-md: 0 10px 30px rgba(154, 52, 18, 0.1);
+  --shadow-lg: 0 20px 45px rgba(154, 52, 18, 0.16);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-creme);
+  color: var(--text-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding-bottom: 75px;
+  position: relative;
+}
+
+/* Canvas for Flower Petal Shower */
+#flowerCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Header & Navbar */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 251, 245, 0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--gold), var(--primary));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+.brand-text h1 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  line-height: 1.1;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.5px;
+}
+.brand-text span {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--primary); }
+.btn-nav-admin {
+  background: #fff7ed;
+  border: 1px solid var(--border);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  padding: 24px 16px 36px;
+  background: radial-gradient(120% 100% at 50% 0%, #fed7aa 0%, #ffedd5 45%, #fffbf5 100%);
+  text-align: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #7c2d12, #9a3412);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 20px rgba(124, 45, 18, 0.25);
+}
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(28px, 6.5vw, 50px);
+  font-weight: 900;
+  color: var(--primary-dark);
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+.odia-quote {
+  font-size: 17px;
+  font-weight: 700;
+  color: #c2410c;
+  margin: 6px auto 12px;
+  max-width: 700px;
+}
+.english-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto 18px;
+}
+
+/* Hero Image Showcase Card */
+.featured-photo-card {
+  max-width: 820px;
+  margin: 0 auto 20px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid #ffedd5;
+  position: relative;
+}
+
+/* Switcher Buttons (Ganesh Darshan vs Committee) */
+.darshan-toggle-bar {
+  display: flex;
+  background: #fff7ed;
+  padding: 6px;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+  justify-content: center;
+}
+.darshan-btn {
+  flex: 1;
+  max-width: 250px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--primary-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+.darshan-btn.active {
+  background: #ffffff;
+  border-color: var(--border);
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.featured-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 460px;
+  background: #2b170c;
+  overflow: hidden;
+}
+.featured-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Special cropping class for committee photo to strictly hide footwear/shoes */
+.featured-img-wrap img.committee-cropped {
+  object-position: center 14%;
+  transform: scale(1.12);
+}
+
+.photo-caption-bar {
+  padding: 14px 18px;
+  background: linear-gradient(180deg, #fff7ed, #fff);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.photo-caption-text {
+  text-align: left;
+}
+.photo-caption-text b {
+  color: var(--primary-dark);
+  font-size: 15px;
+  display: block;
+}
+.photo-caption-text span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Interactive Puja Actions Bar */
+.ritual-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ritual-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  color: var(--primary-dark);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.15);
+  transition: all 0.2s;
+}
+.ritual-btn:hover {
+  background: #fff7ed;
+  border-color: var(--primary);
+}
+.ritual-btn:active { transform: scale(0.94); }
+
+/* Live Countdown Box */
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 540px;
+  margin: 0 auto 22px;
+}
+.timer-cell {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 6px;
+  box-shadow: var(--shadow-sm);
+}
+.timer-cell .num {
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 900;
+  color: var(--primary-dark);
+  line-height: 1;
+  font-family: 'Cinzel', serif;
+}
+.timer-cell .label {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* CTA Buttons */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Layout Containers */
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+section {
+  padding: 34px 0;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+.section-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(22px, 4.5vw, 32px);
+  color: var(--primary-dark);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.section-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Global Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+/* Stat Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.stat-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 10px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.stat-box .val {
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  color: var(--primary-dark);
+  display: block;
+}
+.stat-box .lbl {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* Progress Bar */
+.progress-container {
+  margin: 14px 0 6px;
+}
+.progress-track {
+  height: 16px;
+  background: #fed7aa;
+  border-radius: 999px;
+  overflow: hidden;
+  padding: 3px;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ea580c, #f59e0b);
+  border-radius: 999px;
+  width: 0%;
+  transition: width 1s ease-in-out;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+}
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(234, 88, 12, 0.35);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+}
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+}
+.btn-secondary {
+  background: #fff7ed;
+  color: var(--primary-dark);
+  border: 1.5px solid var(--border);
+}
+.btn-block { width: 100%; }
+
+/* Donation Layout */
+.donation-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 22px;
+}
+.amount-pills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 16px 0;
+}
+.amount-pill {
+  background: #fff7ed;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.amount-pill b {
+  font-size: 17px;
+  color: var(--primary-dark);
+  display: block;
+}
+.amount-pill span {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: block;
+}
+.amount-pill.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 6px 16px rgba(234, 88, 12, 0.3);
+}
+.amount-pill.active b,
+.amount-pill.active span {
+  color: #ffffff;
+}
+
+/* UPI Payment Box */
+.upi-box {
+  background: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
+  border: 2px dashed #fdba74;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+}
+.qr-frame {
+  width: 190px;
+  height: 190px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 16px;
+  margin: 12px auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qr-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.upi-id-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-top: 4px;
+  cursor: pointer;
+}
+.quick-pay-apps {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.pay-app-btn {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 12px;
+  text-align: left;
+}
+.form-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  display: block;
+  margin-bottom: 5px;
+}
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.gallery-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #ffedd5;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-item .overlay-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 8px;
+  border-radius: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Schedule Timeline */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #fdba74;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+.timeline-item::before {
+  content: '🪔';
+  position: absolute;
+  left: -24px;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 50%;
+}
+.timeline-time {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.timeline-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin: 2px 0;
+}
+.timeline-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Supporters Table & Pills */
+.city-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.city-pill {
+  background: #fff7ed;
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+.supporters-table-wrap {
+  max-height: 380px;
+  overflow-y: auto;
+  border-radius: 12px;
+  border: 1px solid #ffedd5;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.table th {
+  position: sticky;
+  top: 0;
+  background: #fff7ed;
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 12px;
+  border-bottom: 1.5px solid var(--border);
+  z-index: 2;
+}
+.table td {
+  padding: 11px 12px;
+  font-size: 13.5px;
+  border-bottom: 1px solid #fff1e0;
+}
+.table tr:hover td { background: #fffcf7; }
+.badge-amount {
+  display: inline-block;
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* Wishes Wall */
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.wish-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+}
+.wish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.wish-author {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+.wish-city {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: #fff7ed;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.wish-body {
+  font-size: 13.5px;
+  color: #443026;
+  font-style: italic;
+}
+
+/* Floating Bottom Bar for Mobile */
+.floating-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  padding: 10px 16px;
+  display: flex;
+  gap: 10px;
+  z-index: 90;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+}
+.floating-bar .btn {
+  flex: 1;
+  padding: 11px 12px;
+  font-size: 14px;
+}
+
+/* Modal Popup & Toast */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 27, 18, 0.65);
+  backdrop-filter: blur(5px);
+  z-index: 200;
+  padding: 16px;
+  overflow-y: auto;
+}
+.modal-box {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  max-width: 560px;
+  margin: 30px auto;
+  padding: 24px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #fff7ed;
+  border: 1px solid var(--border);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background: #1c1917;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  z-index: 300;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Seva Receipt Box */
+.receipt-card {
+  background: linear-gradient(145deg, #fffaf2, #fff);
+  border: 2px dashed #f59e0b;
+  border-radius: 18px;
+  padding: 20px;
+  margin: 16px 0;
+  text-align: center;
+}
+.receipt-header {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--primary-dark);
+  font-family: 'Cinzel', serif;
+}
+
+/* Footer */
+footer {
+  background: #2b170c;
+  color: #fed7aa;
+  padding: 40px 16px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+footer h3 {
+  font-family: 'Cinzel', serif;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+/* Responsive */
+@media(max-width: 800px) {
+  .donation-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; gap: 10px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links a:not(.btn-nav-admin) { display: none; }
+}
+@media(max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .amount-pills { grid-template-columns: repeat(3, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Canvas for Flower Petals Falling Effect -->
+<canvas id="flowerCanvas"></canvas>
+
+<!-- Header / Navigation -->
+<header>
+  <div class="nav-container">
+    <a href="#home" class="brand">
+      <div class="brand-icon">🐘</div>
+      <div class="brand-text">
+        <h1>OUR GANESH 2026</h1>
+        <span>ଆମ ଗଣେଶ ପୂଜା</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#contribute">Contribute</a>
+      <a href="#gallery">Darshan</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#supporters">Family</a>
+      <button class="btn-nav-admin" onclick="openModal('adminModal')">⚙️ Admin</button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <!-- Hero Section -->
+  <div class="hero" id="hero">
+    <div class="hero-badge">
+      <span>🪔</span> GANESH CHATURTHI : 14 SEPTEMBER 2026 <span>🪔</span>
+    </div>
+    <h1 class="hero-title">OUR GANESH 2026</h1>
+    <div class="odia-quote">
+      "ଦୂରେ ଥିଲେ ବି, ଗଣେଶ ପୂଜାରେ ଆମେ ସବୁ ଏକାଠି। ବାପାଙ୍କ କୃପା ସଦା ରହୁ।"
+    </div>
+    <p class="english-sub">
+      Wherever we are—Bangalore, Pune, Surat, Mumbai, Bhubaneswar, or Village—let us celebrate our Ganesh Puja together with joy, bhakti, and unity!
+    </p>
+
+    <!-- Divine Showcase Photo Card with View Switcher -->
+    <div class="featured-photo-card">
+      
+      <!-- Interactive Darshan / Photo View Switcher -->
+      <div class="darshan-toggle-bar">
+        <button class="darshan-btn active" id="btnViewGanesh" onclick="switchHeroView('ganesh')">
+          <span>🐘</span> Shree Ganesh Darshan
+        </button>
+        <button class="darshan-btn" id="btnViewCommittee" onclick="switchHeroView('committee')">
+          <span>👥</span> Puja Family & Committee
+        </button>
+      </div>
+
+      <div class="featured-img-wrap">
+        <!-- Main Image Element -->
+        <img id="mainHeroImg" src="https://images.unsplash.com/photo-1567591370504-20b1e4e08666?auto=format&fit=crop&w=1200&q=80" alt="Shree Ganesh Darshan 2026">
+      </div>
+
+      <div class="photo-caption-bar">
+        <div class="photo-caption-text">
+          <b id="mainImgTitle">🚩 ଶ୍ରୀ ଗଣେଶଙ୍କ ଦିବ୍ୟ ଦର୍ଶନ</b>
+          <span id="mainImgSubtitle">Divine Shree Ganesh Darshan & Blessings 2026</span>
+        </div>
+        
+        <!-- Interactive Ritual Actions -->
+        <div class="ritual-actions">
+          <button class="ritual-btn" onclick="ringTempleBell()" title="Ring Sacred Bell">
+            <span>🔔</span> Ring Bell
+          </button>
+          <button class="ritual-btn" onclick="triggerFlowerShower()" title="Offer Flowers">
+            <span>🌸</span> Flower Shower
+          </button>
+          <button class="ritual-btn" onclick="crackCoconut()" title="Crack Coconut Seva">
+            <span>🥥</span> Coconut Seva
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Real-Time Countdown to Ganesh Chaturthi -->
+    <div class="countdown-grid">
+      <div class="timer-cell">
+        <div class="num" id="cdDays">00</div>
+        <div class="label">Days</div>
+      </div>
+      <div class="timer-cell">
+        <div class="num" id="cdHours">00</div>
+        <div class="label">Hours</div>
+      </div>
+      <div class="timer-cell">
+        <div class="num" id="cdMins">00</div>
+        <div class="label">Mins</div>
+      </div>
+      <div class="timer-cell">
+        <div class="num" id="cdSecs">00</div>
+        <div class="label">Secs</div>
+      </div>
+    </div>
+
+    <!-- Hero CTA Buttons -->
+    <div class="hero-cta-group">
+      <button class="btn btn-primary" onclick="scrollToId('contribute')">
+        <span>❤️</span> MAKE CHANDA / SEVA
+      </button>
+      <button class="btn btn-whatsapp" onclick="shareOnWhatsApp()">
+        <span>📲</span> Share on WhatsApp Group
+      </button>
+    </div>
+  </div>
+
+  <!-- Puja Fund & Goal Tracker Section -->
+  <section>
+    <div class="container">
+      <div class="card">
+        <div class="section-header" style="margin-bottom: 16px;">
+          <h2>🪔 Puja Seva Collection 2026</h2>
+          <p>Every small contribution from our brothers makes our celebration grand & divine.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <span class="val" id="dispTotal">₹0</span>
+            <span class="lbl">Total Collected</span>
+          </div>
+          <div class="stat-box">
+            <span class="val" id="dispSupporters">0</span>
+            <span class="lbl">Devotees Joined</span>
+          </div>
+          <div class="stat-box">
+            <span class="val" id="dispCities">0</span>
+            <span class="lbl">Cities Connected</span>
+          </div>
+        </div>
+
+        <div class="progress-container">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressBar"></div>
+          </div>
+          <div class="progress-meta">
+            <span id="dispProgressPercent">0% Achieved</span>
+            <span>Target: ₹<span id="dispTarget">50,000</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contribution & Fast UPI Payment Section -->
+  <section id="contribute">
+    <div class="container">
+      <div class="section-header">
+        <h2>🙏 Online Seva & Chanda</h2>
+        <p>1. Choose amount &bull; 2. Scan & pay via UPI &bull; 3. Submit your details for instant receipt!</p>
+      </div>
+
+      <div class="card">
+        <div class="donation-grid">
+          <!-- Step 1 & 2: Amount & UPI QR -->
+          <div>
+            <h3 style="color:var(--primary-dark); font-size:18px; margin-bottom:4px;">1. Select Your Seva Amount</h3>
+            <p style="font-size:13px; color:var(--text-muted)">Select an auspicious amount or enter your custom amount.</p>
+            
+            <div class="amount-pills" id="amountPills">
+              <div class="amount-pill" onclick="selectAmount(101)">
+                <b>₹101</b>
+                <span>ଶ୍ରୀ ଗଣେଶ ଶ୍ରଦ୍ଧା</span>
+              </div>
+              <div class="amount-pill" onclick="selectAmount(251)">
+                <b>₹251</b>
+                <span>ମୋଦକ ସେବା</span>
+              </div>
+              <div class="amount-pill active" onclick="selectAmount(501)">
+                <b>₹501</b>
+                <span>ମହା ଆଳତି ସେବା</span>
+              </div>
+              <div class="amount-pill" onclick="selectAmount(1001)">
+                <b>₹1,001</b>
+                <span>ପୁଷ୍ପାଞ୍ଜଳି ସେବା</span>
+              </div>
+              <div class="amount-pill" onclick="selectAmount(2001)">
+                <b>₹2,001</b>
+                <span>ମହାଭୋଗ ସେବା</span>
+              </div>
+              <div class="amount-pill" onclick="selectAmount('custom')">
+                <b>Custom</b>
+                <span>ନିଜ ଇଚ୍ଛା ଅନୁସାରେ</span>
+              </div>
+            </div>
+
+            <!-- Custom Input Box -->
+            <div id="customAmountBox" style="display:none; margin-bottom:14px;">
+              <label style="font-size:13px; font-weight:700; color:var(--primary-dark)">Enter Custom Amount (₹)</label>
+              <input type="number" id="customInput" class="form-control" placeholder="e.g. 5000" oninput="onCustomAmountChange()">
+            </div>
+
+            <!-- UPI Payment Box -->
+            <div class="upi-box">
+              <div style="font-size:12px; font-weight:800; color:var(--primary-dark); letter-spacing:0.5px;">SCAN WITH ANY UPI APP</div>
+              
+              <div class="qr-frame">
+                <img id="upiQrImg" src="" alt="Scan & Pay via UPI">
+              </div>
+
+              <div>
+                <span class="upi-id-badge" onclick="copyUpiId()" title="Click to copy UPI ID">
+                  <span id="dispUpiId">8328835851@ybl</span> 📋 Tap to Copy
+                </span>
+              </div>
+
+              <!-- Instant Pay Buttons for Mobile Users -->
+              <div class="quick-pay-apps">
+                <button class="pay-app-btn" onclick="openUpiApp('gpay')">
+                  <span>🟢</span> Google Pay
+                </button>
+                <button class="pay-app-btn" onclick="openUpiApp('phonepe')">
+                  <span>🟣</span> PhonePe
+                </button>
+                <button class="pay-app-btn" onclick="openUpiApp('paytm')">
+                  <span>🔵</span> Paytm / Any UPI
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Registration Form -->
+          <div style="background:#fffcf8; border:1px solid var(--border); border-radius:var(--radius-md); padding:18px;">
+            <h3 style="color:var(--primary-dark); font-size:18px; margin-bottom:4px;">2. Register Your Contribution</h3>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Submit your name to be included in our official Seva Donors List.</p>
+            
+            <form id="donationForm" onsubmit="handleContributionSubmit(event)">
+              <div class="form-group">
+                <label>Your Full Name *</label>
+                <input type="text" id="devoteeName" class="form-control" placeholder="e.g. Subham Jena / Rajesh Das" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Current City / Place *</label>
+                  <input type="text" id="devoteeCity" class="form-control" placeholder="Bangalore / Village / Surat" required>
+                </div>
+                <div class="form-group">
+                  <label>Amount Paid (₹) *</label>
+                  <input type="number" id="paidAmountField" class="form-control" placeholder="501" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>WhatsApp Phone (Private)</label>
+                  <input type="tel" id="devoteePhone" class="form-control" placeholder="8328835851">
+                </div>
+                <div class="form-group">
+                  <label>UPI Ref / UTR (Optional)</label>
+                  <input type="text" id="devoteeUtr" class="form-control" placeholder="Last 4 digits or UTR">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Prayer / Wish to Lord Ganesh (Optional)</label>
+                <textarea id="devoteeWish" class="form-control" rows="2" placeholder="ବାପା ଆମ ପରିବାର ଉପରେ କୃପା ଦୃଷ୍ଟି ରଖନ୍ତୁ..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" style="padding:14px;">
+                <span>🙏</span> SUBMIT & GET DIGITAL RECEIPT
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section (Pure Ganesh Darshan & Celebrations) -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2>📸 Shree Ganesh Darshan & Puja Memories</h2>
+        <p>Auspicious glimpses of Lord Ganesha, Pushpalankara, Bhog, and Sandhya Aarti.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Photo 1: Divine Ganesh Pratima -->
+        <div class="gallery-item" onclick="viewPhoto('https://images.unsplash.com/photo-1567591370504-20b1e4e08666?auto=format&fit=crop&w=1200&q=80', 'Shree Ganesh Divine Darshan')">
+          <img src="https://images.unsplash.com/photo-1567591370504-20b1e4e08666?auto=format&fit=crop&w=600&q=80" alt="Ganesh Idol Darshan">
+          <div class="overlay-badge">🐘 ଶ୍ରୀ ଗଣେଶ ଦିବ୍ୟ ଦର୍ଶନ</div>
+        </div>
+
+        <!-- Photo 2: Evening Aarti & Deepa -->
+        <div class="gallery-item" onclick="viewPhoto('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1200&q=80', 'Maha Sandhya Aarti with 108 Deepa')">
+          <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80" alt="Evening Aarti">
+          <div class="overlay-badge">🪔 ମହା ସନ୍ଧ୍ୟା ଆଳତି</div>
+        </div>
+
+        <!-- Photo 3: Pushpalankara & Puja Mandap -->
+        <div class="gallery-item" onclick="viewPhoto('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1200&q=80', 'Grand Flower & Mandap Decoration')">
+          <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=600&q=80" alt="Mandap Decor">
+          <div class="overlay-badge">🌸 ପୁଷ୍ପାଳଙ୍କାର ଓ ମଣ୍ଡପ</div>
+        </div>
+
+        <!-- Photo 4: Modak, Ladoo & Maha Bhog -->
+        <div class="gallery-item" onclick="viewPhoto('https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=80', 'Modak, Ladoo & Maha Bhog Prasad')">
+          <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=600&q=80" alt="Prasad Bhog">
+          <div class="overlay-badge">🍬 ମୋଦକ ଓ ମହାଭୋଗ</div>
+        </div>
+
+        <!-- Photo 5: Golden Ganesh Pratima Darshan -->
+        <div class="gallery-item" onclick="viewPhoto('https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80', 'Siddhivinayak Shree Ganesh')">
+          <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=600&q=80" alt="Golden Ganesh">
+          <div class="overlay-badge">✨ ସିଦ୍ଧିବିନାୟକ ରୂପ</div>
+        </div>
+
+        <!-- Photo 6: Mandap Illumination & Sankirtan -->
+        <div class="gallery-item" onclick="viewPhoto('https://images.unsplash.com/photo-1583089892943-e02e5b017b6a?auto=format&fit=crop&w=1200&q=80', 'Evening Bhajan & Festive Celebration')">
+          <img src="https://images.unsplash.com/photo-1583089892943-e02e5b017b6a?auto=format&fit=crop&w=600&q=80" alt="Festive Illumination">
+          <div class="overlay-badge">🥁 ଭଜନ ଓ ମହା ଉତ୍ସବ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule & Timeline Section -->
+  <section id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <h2>🗓️ Puja Schedule & Rituals</h2>
+        <p>14 September 2026 (Ganesh Chaturthi)</p>
+      </div>
+
+      <div class="card" style="max-width:700px; margin:0 auto;">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">07:30 AM &bull; 14 Sept</div>
+            <div class="timeline-title">ମୂର୍ତ୍ତି ସ୍ଥାପନା ଓ ପ୍ରାଣ ପ୍ରତିଷ୍ଠା (Pran Pratishtha)</div>
+            <div class="timeline-desc">Sacred welcome of Lord Ganesha to our mandap with Vedic chants & kalash sthapana.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">10:30 AM &bull; 14 Sept</div>
+            <div class="timeline-title">ମହା ପୁଷ୍ପାଞ୍ଜଳି ଓ ଯଜ୍ଞ (Pushpanjali & Havan)</div>
+            <div class="timeline-desc">Special flower offering ceremony for all families and distant brothers.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">01:00 PM &bull; 14 Sept</div>
+            <div class="timeline-title">ମହା ପ୍ରସାଦ ସେବନ (Maha Prasad Distribution)</div>
+            <div class="timeline-desc">Community feast (Anna Prasad, Dalma, Kheeri & Khaja) for all villagers and guests.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">07:00 PM &bull; 14 Sept</div>
+            <div class="timeline-title">ସନ୍ଧ୍ୟା ଆଳତି ଓ ସାଂସ୍କୃତିକ କାର୍ଯ୍ୟକ୍ରମ (Sandhya Aarti & Bhajan)</div>
+            <div class="timeline-desc">108 Diya Deepa Aarti followed by Bhajan Sandhya, dance performances by kids, and prize distributions.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">Next Day &bull; 15 Sept</div>
+            <div class="timeline-title">ବିସର୍ଜନ ଶୋଭାଯାତ୍ରା (Visarjan Shobhayatra)</div>
+            <div class="timeline-desc">Grand procession with traditional dhols, dulduli, sankirtan, and colors through our village streets.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supporters & Family Section -->
+  <section id="supporters">
+    <div class="container">
+      <div class="section-header">
+        <h2>🌍 Our Ganesh Family & Supporters</h2>
+        <p>Brothers, elders, and well-wishers contributing from everywhere.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:16px; color:var(--primary-dark); margin-bottom:10px;">Connected Cities & Towns</h3>
+        <div class="city-pill-list" id="cityPillList">
+          <!-- Dynamic Pills -->
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin:16px 0 10px;">
+          <h3 style="font-size:16px; color:var(--primary-dark);">🏆 Seva Donors List</h3>
+          <input type="text" id="searchDevotee" placeholder="🔍 Search name or city..." oninput="filterSupporters()" style="max-width:200px; padding:6px 12px; font-size:12px; border:1px solid var(--border); border-radius:10px;">
+        </div>
+
+        <div class="supporters-table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Devotee Name</th>
+                <th>City / Location</th>
+                <th>Seva Amount</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="supportersTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Devotees Prayers & Wishes Wall -->
+  <section id="wishes">
+    <div class="container">
+      <div class="section-header">
+        <h2>🙏 Devotees Prayers to Ganesh Ji</h2>
+        <p>Heartfelt wishes and blessings shared by our family members.</p>
+      </div>
+
+      <div class="wishes-grid" id="wishesContainer">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Updates Noticeboard -->
+  <section id="updates">
+    <div class="container">
+      <div class="section-header">
+        <h2>📢 Latest Puja Notices</h2>
+        <p>Real-time announcements from the organizing committee.</p>
+      </div>
+
+      <div style="max-width:700px; margin:0 auto;" id="updatesContainer">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Floating Mobile Action Bar -->
+<div class="floating-bar">
+  <button class="btn btn-primary" onclick="scrollToId('contribute')">
+    <span>❤️</span> Contribute
+  </button>
+  <button class="btn btn-whatsapp" onclick="shareOnWhatsApp()">
+    <span>📲</span> Share Link
+  </button>
+</div>
+
+<!-- Receipt Modal Popup -->
+<div class="modal" id="receiptModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('receiptModal')">✕</button>
+    <div style="text-align:center;">
+      <div style="font-size:42px;">🙏</div>
+      <h2 style="color:var(--primary-dark); font-family:'Cinzel', serif;">Jay Shree Ganesh!</h2>
+      <p style="font-size:14px; color:var(--green); font-weight:800; margin-top:4px;">✓ Seva Details Registered Successfully</p>
+    </div>
+
+    <div class="receipt-card" id="receiptContent">
+      <div class="receipt-header">OUR GANESH 2026</div>
+      <div style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">Official Puja Seva Slip</div>
+      
+      <div style="display:flex; justify-content:space-between; font-size:14px; padding:6px 0; border-bottom:1px dashed #fed7aa;">
+        <span>Devotee Name:</span>
+        <b id="recName">-</b>
+      </div>
+      <div style="display:flex; justify-content:space-between; font-size:14px; padding:6px 0; border-bottom:1px dashed #fed7aa;">
+        <span>City / Native:</span>
+        <b id="recCity">-</b>
+      </div>
+      <div style="display:flex; justify-content:space-between; font-size:14px; padding:6px 0; border-bottom:1px dashed #fed7aa;">
+        <span>Seva Amount:</span>
+        <b style="color:var(--green); font-size:16px;" id="recAmount">₹0</b>
+      </div>
+      <div style="display:flex; justify-content:space-between; font-size:14px; padding:6px 0;">
+        <span>Date & Receipt No:</span>
+        <span style="font-weight:700;" id="recDate">-</span>
+      </div>
+    </div>
+
+    <p style="font-size:12.5px; color:var(--text-muted); text-align:center; margin-bottom:16px;">
+      Tap below to send this slip directly to the organizer on WhatsApp (8328835851) to verify your seva.
+    </p>
+
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <button class="btn btn-whatsapp btn-block" onclick="sendSlipToOrganizer()">
+        <span>📲</span> Send Slip on WhatsApp (8328835851)
+      </button>
+      <button class="btn btn-secondary btn-block" onclick="closeModal('receiptModal')">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox Photo Modal -->
+<div class="modal" id="photoModal">
+  <div class="modal-box" style="max-width:750px; padding:12px; background:#1c1917; color:#fff;">
+    <button class="modal-close" style="background:#333; color:#fff; border:none;" onclick="closeModal('photoModal')">✕</button>
+    <img id="lightboxImg" src="" alt="Full view" style="width:100%; border-radius:12px; max-height:75vh; object-fit:contain;">
+    <p id="lightboxCaption" style="margin-top:10px; font-weight:700; text-align:center; font-size:14px; color:#fed7aa;"></p>
+  </div>
+</div>
+
+<!-- Admin Login & Dashboard Modal -->
+<div class="modal" id="adminModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('adminModal')">✕</button>
+    
+    <!-- Step 1: Password Gate -->
+    <div id="adminLoginView">
+      <div style="text-align:center; margin-bottom:16px;">
+        <div style="font-size:36px;">🔐</div>
+        <h2 style="color:var(--primary-dark);">Puja Organizer Login</h2>
+        <p style="font-size:13px; color:var(--text-muted);">Enter admin password to manage accounts and settings.</p>
+      </div>
+
+      <div class="form-group">
+        <label>Passcode</label>
+        <input type="password" id="adminPasscode" class="form-control" placeholder="Enter password (default: ganesh2026)" onkeydown="if(event.key==='Enter') verifyAdminLogin()">
+      </div>
+      <button class="btn btn-primary btn-block" onclick="verifyAdminLogin()">
+        🔓 Open Organizer Dashboard
+      </button>
+    </div>
+
+    <!-- Step 2: Organizer Dashboard -->
+    <div id="adminDashboardView" style="display:none;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid var(--border); padding-bottom:10px;">
+        <div>
+          <h2 style="color:var(--primary-dark); font-size:20px;">⚙️ Organizer Panel</h2>
+          <span style="font-size:12px; color:var(--green); font-weight:800;">✓ Authorized Access</span>
+        </div>
+        <button class="btn btn-secondary" style="padding:6px 12px; font-size:12px;" onclick="adminLogout()">Logout</button>
+      </div>
+
+      <!-- Settings Form -->
+      <h3 style="font-size:15px; color:var(--primary-dark); margin-bottom:8px;">Campaign, UPI & Phone Settings</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Campaign Title</label>
+          <input type="text" id="admTitle" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Target Goal (₹)</label>
+          <input type="number" id="admTarget" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>UPI ID for Payments</label>
+          <input type="text" id="admUpi" class="form-control" placeholder="8328835851@ybl">
+        </div>
+        <div class="form-group">
+          <label>WhatsApp Number</label>
+          <input type="text" id="admOrganizerPhone" class="form-control" placeholder="8328835851">
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block" style="margin-bottom:16px;" onclick="saveAdminSettings()">
+        💾 Save Settings
+      </button>
+
+      <!-- Add Manual / Offline Cash Contribution -->
+      <h3 style="font-size:15px; color:var(--primary-dark); margin-bottom:8px;">➕ Add Cash / Offline Contribution</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="admDonorName" class="form-control" placeholder="Donor Name">
+        </div>
+        <div class="form-group">
+          <input type="text" id="admDonorCity" class="form-control" placeholder="City / Village">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <input type="number" id="admDonorAmount" class="form-control" placeholder="Amount (₹)">
+        </div>
+        <div class="form-group">
+          <input type="text" id="admDonorWish" class="form-control" placeholder="Blessing wish (optional)">
+        </div>
+      </div>
+      <button class="btn btn-secondary btn-block" style="margin-bottom:16px;" onclick="addManualContribution()">
+        ➕ Add Entry to List
+      </button>
+
+      <!-- Post Live Notice -->
+      <h3 style="font-size:15px; color:var(--primary-dark); margin-bottom:8px;">📢 Publish Live Notice</h3>
+      <div class="form-group">
+        <textarea id="admNoticeText" class="form-control" rows="2" placeholder="e.g. Mandap decoration work has started today..."></textarea>
+      </div>
+      <button class="btn btn-secondary btn-block" style="margin-bottom:16px;" onclick="publishNotice()">
+        📢 Post Announcement
+      </button>
+
+      <!-- Data Export / Reset -->
+      <div style="display:flex; gap:10px; margin-top:14px; border-top:1px solid var(--border); padding-top:14px;">
+        <button class="btn btn-secondary" style="flex:1; font-size:12px;" onclick="exportDataExcel()">
+          📥 Export CSV / Excel
+        </button>
+        <button class="btn btn-secondary" style="flex:1; font-size:12px; color:#b91c1c; border-color:#fca5a5;" onclick="resetToInitialData()">
+          ⚠️ Reset Demo Data
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Toast Message Box -->
+<div class="toast" id="toastBox">Message</div>
+
+<!-- Footer -->
+<footer>
+  <div style="font-size:32px; margin-bottom:10px;">🐘 🪔 🌸</div>
+  <h3>OUR GANESH 2026 &bull; ଆମ ଗଣେଶ ପୂଜା</h3>
+  <p style="font-size:14px; max-width:600px; margin:8px auto; opacity:0.9;">
+    14 September 2026 &bull; Our Village &bull; Our Festival &bull; Our Brotherly Unity
+  </p>
+  <p style="font-size:12px; opacity:0.75; margin-top:14px;">
+    Organized with devotion & solidarity for all brothers & families.
+  </p>
+</footer>
+
+<script>
+/* ==========================================================================
+   APP STATE & DEFAULT DATA
+   ========================================================================== */
+const STORAGE_KEY = 'our_ganesh_puja_2026_unified_v4';
+
+const DEFAULT_STATE = {
+  settings: {
+    title: 'OUR GANESH 2026',
+    subTitle: 'ଆମ ଗଣେଶ ପୂଜା',
+    target: 50000,
+    upi: '8328835851@ybl',
+    organizerPhone: '8328835851',
+    password: 'ganesh2026'
+  },
+  contributions: [
+    { id: 'REC-101', name: 'Balaram Jena', city: 'Bangalore', amount: 2001, date: '28 Aug 2026', utr: 'UPI-4921' },
+    { id: 'REC-102', name: 'Soumya Ranjan Das', city: 'Bhubaneswar', amount: 1001, date: '28 Aug 2026', utr: 'UPI-8832' },
+    { id: 'REC-103', name: 'Bikash Mohanty', city: 'Pune', amount: 1501, date: '29 Aug 2026', utr: 'UPI-9120' },
+    { id: 'REC-104', name: 'Prabin Sahoo', city: 'Surat', amount: 1001, date: '29 Aug 2026', utr: 'UPI-7711' },
+    { id: 'REC-105', name: 'Manas Kumar Nayak', city: 'Village', amount: 501, date: '29 Aug 2026', utr: 'UPI-3021' },
+    { id: 'REC-106', name: 'Chandan Jena', city: 'Hyderabad', amount: 501, date: '29 Aug 2026', utr: 'UPI-5092' }
+  ],
+  wishes: [
+    { name: 'Balaram Jena', city: 'Bangalore', wish: 'ବାପା ଆମ ସମସ୍ତ ଭାଇମାନଙ୍କୁ ଖୁସି ଓ ସୁସ୍ଥ ରଖନ୍ତୁ। Jay Ganesh!' },
+    { name: 'Bikash Mohanty', city: 'Pune', wish: 'May Lord Ganesh remove all obstacles and bless all our village families.' },
+    { name: 'Prabin Sahoo', city: 'Surat', wish: 'ଗାଁ ପୂଜା ସବୁବେଳେ ସବୁଠୁ ସ୍ପେଶାଲ। Ganapati Bappa Morya!' }
+  ],
+  updates: [
+    { date: '29 Aug 2026', text: 'ମଣ୍ଡପ କାମ ଓ ଆଲୋକସଜ୍ଜା ପାଇଁ ପ୍ରସ୍ତୁତି ଆରମ୍ଭ ହୋଇସାରିଛି। ସମସ୍ତ ସାଙ୍ଗସାଥୀ ଯୋଗଦାନ କରନ୍ତୁ।' },
+    { date: '25 Aug 2026', text: 'Ganesh Puja 2026 Online Portal is officially active for all village brothers across India.' }
+  ]
+};
+
+let appState = null;
+let currentSelectedAmount = 501;
+let lastSubmittedReceipt = null;
+
+// High quality divine Ganesh Pratima URL
+const DIVINE_GANESH_IMG = "https://images.unsplash.com/photo-1567591370504-20b1e4e08666?auto=format&fit=crop&w=1200&q=80";
+const COMMITTEE_IMG = "1000209036.png";
+
+function loadState() {
+  try {
+    const local = localStorage.getItem(STORAGE_KEY);
+    if (local) {
+      appState = JSON.parse(local);
+      if (!appState.settings) appState.settings = { ...DEFAULT_STATE.settings };
+      appState.settings.upi = '8328835851@ybl';
+      appState.settings.organizerPhone = '8328835851';
+    } else {
+      appState = JSON.parse(JSON.stringify(DEFAULT_STATE));
+      saveState();
+    }
+  } catch (e) {
+    appState = JSON.parse(JSON.stringify(DEFAULT_STATE));
+  }
+}
+
+function saveState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+  renderApp();
+}
+
+/* ==========================================================================
+   HERO IMAGE & VIEW SWITCHER (GANESH VS COMMITTEE)
+   ========================================================================== */
+function switchHeroView(viewType) {
+  const img = document.getElementById('mainHeroImg');
+  const title = document.getElementById('mainImgTitle');
+  const subtitle = document.getElementById('mainImgSubtitle');
+  const btnG = document.getElementById('btnViewGanesh');
+  const btnC = document.getElementById('btnViewCommittee');
+
+  if (viewType === 'committee') {
+    btnC.classList.add('active');
+    btnG.classList.remove('active');
+    img.src = COMMITTEE_IMG;
+    img.className = 'committee-cropped'; // Strictly crops top/waist up to eliminate shoes/carpet
+    img.onerror = () => {
+      img.src = DIVINE_GANESH_IMG;
+      img.className = '';
+    };
+    title.innerHTML = '🚩 ଆମ ପୂଜା କମିଟି ଓ ସମସ୍ତ ସାଙ୍ଗସାଥୀ';
+    subtitle.innerHTML = 'Puja Organizing Committee & Village Youths 2026';
+    showToast('👥 Viewing Puja Committee');
+  } else {
+    btnG.classList.add('active');
+    btnC.classList.remove('active');
+    img.src = DIVINE_GANESH_IMG;
+    img.className = '';
+    title.innerHTML = '🚩 ଶ୍ରୀ ଗଣେଶଙ୍କ ଦିବ୍ୟ ଦର୍ଶନ';
+    subtitle.innerHTML = 'Divine Shree Ganesh Darshan & Blessings 2026';
+    showToast('🐘 Viewing Shree Ganesh Pratima');
+  }
+}
+
+/* ==========================================================================
+   RENDER FUNCTIONS
+   ========================================================================== */
+function formatRupees(num) {
+  return Number(num || 0).toLocaleString('en-IN');
+}
+
+function escapeHtml(str) {
+  return String(str ?? '').replace(/[&<>"']/g, m => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+  }[m]));
+}
+
+function renderApp() {
+  if (!appState) return;
+
+  document.getElementById('dispUpiId').textContent = appState.settings.upi;
+  document.getElementById('dispTarget').textContent = formatRupees(appState.settings.target);
+
+  // Collection Stats
+  const total = appState.contributions.reduce((sum, item) => sum + Number(item.amount || 0), 0);
+  document.getElementById('dispTotal').textContent = '₹' + formatRupees(total);
+  document.getElementById('dispSupporters').textContent = appState.contributions.length;
+
+  const uniqueCities = [...new Set(appState.contributions.map(c => (c.city || 'Village').trim()).filter(Boolean))];
+  document.getElementById('dispCities').textContent = uniqueCities.length;
+
+  // Progress Bar
+  const pct = Math.min(100, Math.round((total / (appState.settings.target || 1)) * 100));
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('dispProgressPercent').textContent = `${pct}% Achieved (₹${formatRupees(total)})`;
+
+  // QR Code
+  updateQrCode();
+
+  // City Pills
+  const cityPillsHtml = uniqueCities.map(city => `<span class="city-pill">📍 ${escapeHtml(city)}</span>`).join('');
+  document.getElementById('cityPillList').innerHTML = cityPillsHtml || '<span style="color:#777; font-size:13px;">No cities registered yet.</span>';
+
+  // Supporters Table
+  renderSupportersTable(appState.contributions);
+
+  // Wishes Wall
+  renderWishes();
+
+  // Updates List
+  renderUpdates();
+}
+
+function renderSupportersTable(list) {
+  const tbody = document.getElementById('supportersTableBody');
+  if (!list || list.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#777; padding:18px;">No contributions recorded yet. Be the first one!</td></tr>';
+    return;
+  }
+
+  const rows = list.slice().reverse().map(item => `
+    <tr>
+      <td><b>${escapeHtml(item.name)}</b></td>
+      <td>📍 ${escapeHtml(item.city || 'Village')}</td>
+      <td><span class="badge-amount">₹${formatRupees(item.amount)}</span></td>
+      <td style="color:#786255; font-size:12px;">${escapeHtml(item.date || 'Today')}</td>
+    </tr>
+  `).join('');
+
+  tbody.innerHTML = rows;
+}
+
+function renderWishes() {
+  const container = document.getElementById('wishesContainer');
+  if (!appState.wishes || appState.wishes.length === 0) {
+    container.innerHTML = '<p style="color:#777; text-align:center; grid-column:1/-1;">Be the first to share a prayer or wish for Ganesh Ji.</p>';
+    return;
+  }
+
+  const cards = appState.wishes.slice().reverse().map(w => `
+    <div class="wish-card">
+      <div class="wish-header">
+        <span class="wish-author">🙏 ${escapeHtml(w.name)}</span>
+        <span class="wish-city">${escapeHtml(w.city)}</span>
+      </div>
+      <div class="wish-body">"${escapeHtml(w.wish)}"</div>
+    </div>
+  `).join('');
+
+  container.innerHTML = cards;
+}
+
+function renderUpdates() {
+  const container = document.getElementById('updatesContainer');
+  if (!appState.updates || appState.updates.length === 0) {
+    container.innerHTML = '<div class="card" style="text-align:center; color:#777;">No notices posted yet.</div>';
+    return;
+  }
+
+  const items = appState.updates.slice().reverse().map(u => `
+    <div class="card" style="margin-bottom:12px; border-left:4px solid var(--gold);">
+      <div style="font-size:12px; font-weight:800; color:var(--primary);">${escapeHtml(u.date)}</div>
+      <p style="font-size:14px; color:var(--text-main); margin-top:4px;">${escapeHtml(u.text)}</p>
+    </div>
+  `).join('');
+
+  container.innerHTML = items;
+}
+
+/* ==========================================================================
+   UPI DONATION & PAYMENTS
+   ========================================================================== */
+function selectAmount(amt) {
+  const pills = document.querySelectorAll('.amount-pill');
+  pills.forEach(p => p.classList.remove('active'));
+
+  const customBox = document.getElementById('customAmountBox');
+  const paidField = document.getElementById('paidAmountField');
+
+  if (amt === 'custom') {
+    currentSelectedAmount = 0;
+    customBox.style.display = 'block';
+    document.getElementById('customInput').focus();
+    paidField.value = '';
+    pills[pills.length - 1].classList.add('active');
+  } else {
+    currentSelectedAmount = amt;
+    customBox.style.display = 'none';
+    paidField.value = amt;
+    event.currentTarget.classList.add('active');
+  }
+
+  updateQrCode();
+}
+
+function onCustomAmountChange() {
+  const val = Number(document.getElementById('customInput').value);
+  currentSelectedAmount = val > 0 ? val : 0;
+  document.getElementById('paidAmountField').value = currentSelectedAmount || '';
+  updateQrCode();
+}
+
+function getFinalAmount() {
+  if (currentSelectedAmount > 0) return currentSelectedAmount;
+  const typed = Number(document.getElementById('paidAmountField').value);
+  return typed > 0 ? typed : 501;
+}
+
+function updateQrCode() {
+  const amount = getFinalAmount();
+  const upiId = appState?.settings?.upi || '8328835851@ybl';
+  const name = encodeURIComponent(appState?.settings?.title || 'Our Ganesh 2026');
+  const upiUri = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${name}&am=${amount}&cu=INR&tn=GaneshPujaSeva`;
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upiUri)}`;
+  document.getElementById('upiQrImg').src = qrUrl;
+}
+
+function openUpiApp(app) {
+  const amount = getFinalAmount();
+  const upiId = appState.settings.upi || '8328835851@ybl';
+  const title = encodeURIComponent(appState.settings.title);
+  const upiUri = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${title}&am=${amount}&cu=INR&tn=GaneshPujaSeva`;
+  
+  window.location.href = upiUri;
+  showToast('Opening UPI payment app...');
+}
+
+function copyUpiId() {
+  const upi = appState.settings.upi || '8328835851@ybl';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(upi);
+  } else {
+    const input = document.createElement('input');
+    input.value = upi;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+  }
+  showToast('✓ UPI ID Copied: ' + upi);
+}
+
+/* ==========================================================================
+   FORM SUBMISSION & RECEIPT
+   ========================================================================== */
+function handleContributionSubmit(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('devoteeName').value.trim();
+  const city = document.getElementById('devoteeCity').value.trim();
+  const amount = Number(document.getElementById('paidAmountField').value);
+  const phone = document.getElementById('devoteePhone').value.trim();
+  const utr = document.getElementById('devoteeUtr').value.trim();
+  const wish = document.getElementById('devoteeWish').value.trim();
+
+  if (!name || !city || !amount || amount <= 0) {
+    showToast('Please enter your name, city, and valid amount.');
+    return;
+  }
+
+  const receiptId = 'GNP-' + Math.floor(10000 + Math.random() * 90000);
+  const today = new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+
+  const record = {
+    id: receiptId,
+    name,
+    city,
+    amount,
+    phone,
+    utr,
+    date: today
+  };
+
+  appState.contributions.push(record);
+  if (wish) {
+    appState.wishes.push({ name, city, wish });
+  }
+
+  saveState();
+
+  // Flower Shower Celebration on payment submission
+  triggerFlowerShower();
+  ringTempleBell();
+
+  // Populate receipt modal
+  lastSubmittedReceipt = record;
+  document.getElementById('recName').textContent = name;
+  document.getElementById('recCity').textContent = city;
+  document.getElementById('recAmount').textContent = '₹' + formatRupees(amount);
+  document.getElementById('recDate').textContent = `${today} (${receiptId})`;
+
+  // Reset Form
+  document.getElementById('donationForm').reset();
+  selectAmount(501);
+
+  // Show Receipt Modal
+  openModal('receiptModal');
+  showToast('✓ Seva registered successfully!');
+}
+
+function sendSlipToOrganizer() {
+  if (!lastSubmittedReceipt) return;
+
+  const phone = (appState.settings.organizerPhone || '8328835851').replace(/\D/g, '');
+  const formattedPhone = phone.length === 10 ? '91' + phone : phone;
+
+  const msg = `🙏 *Jay Shree Ganesh! Seva Slip Confirmation*\n\n` +
+              `🚩 *Campaign:* ${appState.settings.title}\n` +
+              `👤 *Name:* ${lastSubmittedReceipt.name}\n` +
+              `📍 *City / Place:* ${lastSubmittedReceipt.city}\n` +
+              `💰 *Amount Paid:* ₹${formatRupees(lastSubmittedReceipt.amount)}\n` +
+              `🔢 *Receipt No:* ${lastSubmittedReceipt.id}\n` +
+              `📅 *Date:* ${lastSubmittedReceipt.date}\n\n` +
+              `Kindly verify my contribution. Ganapati Bappa Morya! 🐘`;
+
+  const waUrl = `https://api.whatsapp.com/send?phone=${encodeURIComponent(formattedPhone)}&text=${encodeURIComponent(msg)}`;
+  window.open(waUrl, '_blank');
+}
+
+function shareOnWhatsApp() {
+  const title = appState?.settings?.title || 'Our Ganesh 2026';
+  const text = `🌸 *${title} | 14 September 2026* 🌸\n\n` +
+               `ଦୂରେ ଥିଲେ ବି, ଗଣେଶ ପୂଜାରେ ଆମେ ସବୁ ଏକାଠି।\n` +
+               `Join our village Ganesh Puja celebration, view divine photo gallery, check schedule & contribute online here:\n\n` +
+               `${window.location.href}\n\n` +
+               `🚩 *Ganapati Bappa Morya!*`;
+  
+  if (navigator.share) {
+    navigator.share({ title: title, text: text, url: window.location.href }).catch(() => {});
+  } else {
+    const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank');
+  }
+}
+
+/* ==========================================================================
+   INTERACTIVE RITUALS & AUDIO SYNTHESIS
+   ========================================================================== */
+function ringTempleBell() {
+  try {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) return showToast('🔔 Temple Bell Chime!');
+    
+    const ctx = new AudioContext();
+    const now = ctx.currentTime;
+
+    const freqs = [587.33, 880, 1174.66, 1760, 2349.32];
+    freqs.forEach((f, idx) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = idx % 2 === 0 ? 'sine' : 'triangle';
+      osc.frequency.setValueAtTime(f, now);
+
+      gain.gain.setValueAtTime(0.25 / (idx + 1), now);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 3.0);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(now);
+      osc.stop(now + 3.0);
+    });
+
+    showToast('🔔 ॐ गं गणपतये नमः (Jay Ganesh!)');
+  } catch (err) {
+    showToast('🔔 ॐ गं गणपतये नमः');
+  }
+}
+
+function crackCoconut() {
+  try {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (AudioContext) {
+      const ctx = new AudioContext();
+      const now = ctx.currentTime;
+      
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(140, now);
+      osc.frequency.exponentialRampToValueAtTime(40, now + 0.15);
+      
+      gain.gain.setValueAtTime(0.5, now);
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+      
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      
+      osc.start(now);
+      osc.stop(now + 0.2);
+    }
+  } catch(e){}
+
+  triggerFlowerShower();
+  showToast('🥥 ନାରିକେଳ ସେବା ସମ୍ପନ୍ନ! Ganapati Bappa Morya!');
+}
+
+/* Flower Shower (HTML5 Canvas Engine) */
+let petals = [];
+let animRunning = false;
+
+function initPetals() {
+  const canvas = document.getElementById('flowerCanvas');
+  if (!canvas) return;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+window.addEventListener('resize', initPetals);
+
+function triggerFlowerShower() {
+  const canvas = document.getElementById('flowerCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const colors = ['#f97316', '#f59e0b', '#fbbf24', '#e11d48', '#f43f5e', '#fed7aa'];
+  
+  for (let i = 0; i < 70; i++) {
+    petals.push({
+      x: Math.random() * canvas.width,
+      y: -20 - Math.random() * 150,
+      size: 10 + Math.random() * 14,
+      speedY: 2 + Math.random() * 3.5,
+      speedX: (Math.random() - 0.5) * 2.5,
+      rotation: Math.random() * 360,
+      rotSpeed: (Math.random() - 0.5) * 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      opacity: 0.9
+    });
+  }
+
+  if (!animRunning) {
+    animRunning = true;
+    animateFlowers();
+  }
+
+  showToast('🌸 ପୁଷ୍ପବୃଷ୍ଟି ସେବା (Flower Shower)!');
+}
+
+function animateFlowers() {
+  const canvas = document.getElementById('flowerCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for (let i = 0; i < petals.length; i++) {
+    const p = petals[i];
+    p.y += p.speedY;
+    p.x += Math.sin(p.y / 30) * 1.5 + p.speedX;
+    p.rotation += p.rotSpeed;
+
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate((p.rotation * Math.PI) / 180);
+    ctx.fillStyle = p.color;
+    ctx.globalAlpha = p.opacity;
+
+    ctx.beginPath();
+    ctx.ellipse(0, 0, p.size, p.size * 0.6, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  petals = petals.filter(p => p.y < canvas.height + 40);
+
+  if (petals.length > 0) {
+    requestAnimationFrame(animateFlowers);
+  } else {
+    animRunning = false;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+}
+
+/* ==========================================================================
+   SEARCH & FILTER
+   ========================================================================== */
+function filterSupporters() {
+  const q = document.getElementById('searchDevotee').value.toLowerCase().trim();
+  if (!q) {
+    renderSupportersTable(appState.contributions);
+    return;
+  }
+  const filtered = appState.contributions.filter(c => 
+    (c.name || '').toLowerCase().includes(q) || 
+    (c.city || '').toLowerCase().includes(q)
+  );
+  renderSupportersTable(filtered);
+}
+
+/* ==========================================================================
+   COUNTDOWN TIMER
+   ========================================================================== */
+function runCountdown() {
+  const targetDate = new Date('2026-09-14T06:00:00+05:30').getTime();
+  const now = new Date().getTime();
+  const diff = targetDate - now;
+
+  if (diff <= 0) {
+    document.getElementById('cdDays').textContent = '00';
+    document.getElementById('cdHours').textContent = '00';
+    document.getElementById('cdMins').textContent = '00';
+    document.getElementById('cdSecs').textContent = '00';
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
+  document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('cdMins').textContent = String(mins).padStart(2, '0');
+  document.getElementById('cdSecs').textContent = String(secs).padStart(2, '0');
+}
+
+/* ==========================================================================
+   PHOTO LIGHTBOX & MODALS
+   ========================================================================== */
+function viewPhoto(src, caption) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxCaption').textContent = caption || '';
+  openModal('photoModal');
+}
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = 'block';
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = 'none';
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toastBox');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
+function scrollToId(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+/* ==========================================================================
+   ADMIN CONTROLS
+   ========================================================================== */
+function verifyAdminLogin() {
+  const pass = document.getElementById('adminPasscode').value;
+  if (pass === appState.settings.password) {
+    document.getElementById('adminLoginView').style.display = 'none';
+    document.getElementById('adminDashboardView').style.display = 'block';
+    
+    document.getElementById('admTitle').value = appState.settings.title;
+    document.getElementById('admTarget').value = appState.settings.target;
+    document.getElementById('admUpi').value = appState.settings.upi || '8328835851@ybl';
+    document.getElementById('admOrganizerPhone').value = appState.settings.organizerPhone || '8328835851';
+    
+    showToast('✓ Welcome Organizer!');
+  } else {
+    showToast('❌ Incorrect passcode. Try: ganesh2026');
+  }
+}
+
+function adminLogout() {
+  document.getElementById('adminLoginView').style.display = 'block';
+  document.getElementById('adminDashboardView').style.display = 'none';
+  document.getElementById('adminPasscode').value = '';
+  closeModal('adminModal');
+}
+
+function saveAdminSettings() {
+  appState.settings.title = document.getElementById('admTitle').value.trim() || 'OUR GANESH 2026';
+  appState.settings.target = Number(document.getElementById('admTarget').value) || 50000;
+  appState.settings.upi = document.getElementById('admUpi').value.trim() || '8328835851@ybl';
+  appState.settings.organizerPhone = document.getElementById('admOrganizerPhone').value.trim() || '8328835851';
+  
+  saveState();
+  showToast('✓ Settings updated successfully!');
+}
+
+function addManualContribution() {
+  const name = document.getElementById('admDonorName').value.trim();
+  const city = document.getElementById('admDonorCity').value.trim() || 'Village';
+  const amount = Number(document.getElementById('admDonorAmount').value);
+  const wish = document.getElementById('admDonorWish').value.trim();
+
+  if (!name || !amount) {
+    showToast('Please enter donor name and amount.');
+    return;
+  }
+
+  const record = {
+    id: 'MAN-' + Math.floor(1000 + Math.random() * 9000),
+    name,
+    city,
+    amount,
+    date: new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
+  };
+
+  appState.contributions.push(record);
+  if (wish) appState.wishes.push({ name, city, wish });
+
+  saveState();
+
+  document.getElementById('admDonorName').value = '';
+  document.getElementById('admDonorCity').value = '';
+  document.getElementById('admDonorAmount').value = '';
+  document.getElementById('admDonorWish').value = '';
+  showToast('✓ Entry added to Seva list!');
+}
+
+function publishNotice() {
+  const text = document.getElementById('admNoticeText').value.trim();
+  if (!text) return showToast('Please write a notice message.');
+
+  const today = new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+  appState.updates.push({ date: today, text });
+  saveState();
+
+  document.getElementById('admNoticeText').value = '';
+  showToast('📢 Notice published live!');
+}
+
+function exportDataExcel() {
+  if (!appState.contributions.length) return showToast('No contributions to export.');
+
+  let csv = 'Receipt ID,Name,City,Amount (INR),Date,UTR Ref\n';
+  appState.contributions.forEach(c => {
+    csv += `"${c.id || ''}","${c.name}","${c.city || ''}","${c.amount}","${c.date || ''}","${c.utr || ''}"\n`;
+  });
+
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.setAttribute('href', url);
+  link.setAttribute('download', `Ganesh_Puja_2026_Contributions.csv`);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  showToast('📥 CSV downloaded successfully!');
+}
+
+function resetToInitialData() {
+  localStorage.removeItem(STORAGE_KEY);
+  loadState();
+  renderApp();
+  showToast('Reset to default data.');
+}
+
+window.onclick = function(e) {
+  if (e.target.classList.contains('modal')) {
+    e.target.style.display = 'none';
+  }
+};
+
+/* ==========================================================================
+   INITIALIZATION
+   ========================================================================== */
+window.addEventListener('DOMContentLoaded', () => {
+  initPetals();
+  loadState();
+  renderApp();
+  runCountdown();
+  setInterval(runCountdown, 1000);
+});
+</script>
+</body>
+</html>
